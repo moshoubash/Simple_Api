@@ -252,3 +252,13 @@
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.APIGatewayEvents.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.AspNetCoreServer.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.AspNetCoreServer.Hosting.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.Core.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.Logging.AspNetCore.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.RuntimeSupport.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.Serialization.SystemTextJson.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/SnapshotRestore.Registry.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/obj/Debug/net9.0/ecommerce.sourcelink.json
