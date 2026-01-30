@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http.Headers;
 using System.Net;
+using ecommerce_back.DTOs;
 
 namespace ecommerce_back.Controllers
 {
@@ -26,25 +27,25 @@ namespace ecommerce_back.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register([FromBody] JsonElement userJson)
+        public IActionResult Register([FromBody] RegisterRequest registerRequest)
         {
-            if(!userJson.GetProperty("password").GetString().Equals(userJson.GetProperty("password_confirmation").GetString()))
+            if(!registerRequest.password.Equals(registerRequest.password_confirmation))
             {
                 return BadRequest("Password and password confirmation do not match");
             }
 
             var passwordRegex = new System.Text.RegularExpressions.Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$");
             
-            if (!passwordRegex.IsMatch(userJson.GetProperty("password").GetString()))
+            if (!passwordRegex.IsMatch(registerRequest.password))
             {
                 return BadRequest("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number and one special character");
             }
             
             var user = new User
             {
-                Name = userJson.GetProperty("name").GetString(),
-                Email = userJson.GetProperty("email").GetString(),
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userJson.GetProperty("password").GetString()),
+                Name = registerRequest.name,
+                Email = registerRequest.email,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerRequest.password),
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
@@ -63,16 +64,16 @@ namespace ecommerce_back.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] JsonElement userJson)
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Email == userJson.GetProperty("email").GetString());
+            var user = _context.Users.FirstOrDefault(u => u.Email == loginRequest.email);
 
             if (user == null)
             {
                 return BadRequest("User not found");
             }
 
-            if (!BCrypt.Net.BCrypt.Verify(userJson.GetProperty("password").GetString(), user.PasswordHash))
+            if (!BCrypt.Net.BCrypt.Verify(loginRequest.password, user.PasswordHash))
             {
                 return BadRequest("Wrong password");
             }
@@ -115,8 +116,14 @@ namespace ecommerce_back.Controllers
         }
         
         [HttpGet("profile")]
-        public async Task<IActionResult> Profile(string accessToken)
+        public async Task<IActionResult> Profile([FromHeader] string Authorization)
         {
+            if (string.IsNullOrEmpty(Authorization) || !Authorization.StartsWith("Bearer "))
+            {
+                return Unauthorized("Invalid Authorization header");
+            }
+            
+            var accessToken = Authorization.Substring("Bearer ".Length);
             var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
             var userEmail = principal.Identity.Name;
 
