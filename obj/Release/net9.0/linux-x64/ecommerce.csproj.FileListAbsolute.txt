@@ -140,3 +140,4 @@
 /home/mohammad-shoubash/dotnet/ecommerce_back/obj/Release/net9.0/linux-x64/ecommerce.pdb
 /home/mohammad-shoubash/dotnet/ecommerce_back/obj/Release/net9.0/linux-x64/ecommerce.genruntimeconfig.cache
 /home/mohammad-shoubash/dotnet/ecommerce_back/obj/Release/net9.0/linux-x64/ref/ecommerce.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/linux-x64/aws-lambda-tools-defaults.json

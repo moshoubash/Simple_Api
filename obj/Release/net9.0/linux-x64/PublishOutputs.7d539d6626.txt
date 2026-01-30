@@ -1,6 +1,7 @@
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/ecommerce
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/appsettings.Development.json
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/appsettings.json
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/aws-lambda-tools-defaults.json
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/ecommerce.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/ecommerce.runtimeconfig.json
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Release/net9.0/publish/ecommerce.pdb

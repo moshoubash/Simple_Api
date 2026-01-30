@@ -37,6 +37,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddAuthorization();
+builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -46,12 +47,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.MapControllers();
-    app.MapScalarApiReference();
-}
+app.MapOpenApi();
+app.MapControllers();
+app.MapScalarApiReference();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

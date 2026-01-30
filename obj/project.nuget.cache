@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oqU5yPzqGXE=",
+  "dgSpecHash": "BsNdVZ9/6QY=",
   "success": true,
   "projectFilePath": "/home/mohammad-shoubash/dotnet/ecommerce_back/ecommerce.csproj",
   "expectedPackageFiles": [
@@ -67,7 +67,8 @@
     "/home/mohammad-shoubash/.nuget/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
     "/home/mohammad-shoubash/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/mohammad-shoubash/.nuget/packages/system.text.json/9.0.0/system.text.json.9.0.0.nupkg.sha512",
-    "/home/mohammad-shoubash/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+    "/home/mohammad-shoubash/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
+    "/home/mohammad-shoubash/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.12/microsoft.netcore.app.host.linux-x64.9.0.12.nupkg.sha512"
   ],
   "logs": []
 }
