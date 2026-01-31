@@ -7,8 +7,12 @@ using ecommerce_back.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
+// .net 9 only
+// builder.Services.AddOpenApi();
+
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // builder.Services.AddAuthentication(options =>
 //     {
@@ -40,17 +44,19 @@ builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(
-    options => options.UseNpgsql(connectionString)
+    options => options.UseNpgsql(connectionString, o => o.EnableRetryOnFailure())
 );
 
 var app = builder.Build();
 
-if(app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.MapControllers();
-    app.MapScalarApiReference();
-}
+// .net 9 only
+// app.MapOpenApi();
+
+app.MapControllers();
+// app.MapScalarApiReference();
+
+app.UseSwagger();
+app.UsePathBase("/Prod");
 
 // app.UseAuthentication();
 // app.UseAuthorization();

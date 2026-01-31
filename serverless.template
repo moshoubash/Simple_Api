@@ -9,7 +9,7 @@
       "Type": "AWS::Serverless::Function",
       "Properties": {
         "Handler": "dotnet::dotnet.LambdaEntryPoint::FunctionHandlerAsync",
-        "Runtime": "dotnet9",
+        "Runtime": "dotnet8",
         "CodeUri": "",
         "MemorySize": 512,
         "Timeout": 30,
