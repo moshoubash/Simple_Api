@@ -145,8 +145,6 @@
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Mono.TextTemplating.dll
-/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/MySqlConnector.dll
-/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/RestSharp.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/System.CodeDom.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/System.Composition.AttributedModel.dll
@@ -262,3 +260,15 @@
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Amazon.Lambda.Serialization.SystemTextJson.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/SnapshotRestore.Registry.dll
 /home/mohammad-shoubash/dotnet/ecommerce_back/obj/Debug/net9.0/ecommerce.sourcelink.json
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/aws-lambda-tools-defaults.json
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Npgsql.dll
+/home/mohammad-shoubash/dotnet/ecommerce_back/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
